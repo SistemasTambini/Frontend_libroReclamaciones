@@ -24,6 +24,33 @@ document.addEventListener("DOMContentLoaded", function () {
       fechaRegistro.value = fechaFormateada;
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const checkboxMenorEdad = document.getElementById("menorEdad");
+  
+  // Seleccionamos todos los labels dentro del formulario
+  const labels = document.querySelectorAll("#formContainer label");
+
+  // Campos específicos a modificar
+  const campos = ["Correo Electrónico", "Teléfono", "Dirección completa", "Distrito", "Departamento", "Provincia"];
+
+  checkboxMenorEdad.addEventListener("change", function () {
+      labels.forEach(label => {
+          const textoOriginal = label.textContent.trim(); // Obtenemos el texto original del label sin espacios extra
+
+          // Si el label coincide con uno de los campos a modificar
+          if (campos.includes(textoOriginal)) {
+              if (checkboxMenorEdad.checked) {
+                  if (!textoOriginal.includes("Apoderado")) {
+                      label.textContent = `${textoOriginal} Apoderado`;
+                  }
+              } else {
+                  label.textContent = textoOriginal.replace(" Apoderado", ""); // Quitamos "Apoderado" si se desmarca
+              }
+          }
+      });
+  });
+});
+
 
 
 function showSection(index) {

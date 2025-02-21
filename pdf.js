@@ -54,12 +54,23 @@ function generarPDF(datos) {
     doc.setTextColor(0, 0, 0);
 
     // Formatear la fecha de registro a "día-mes-año"
+    // function formatearFecha(fecha) {
+    //     const date = new Date(fecha);
+    //     const año = date.getFullYear();
+    //     const mes = String(date.getMonth() + 1).padStart(2, '0');
+    //     const dia = String(date.getDate()).padStart(2, '0');
+    //     return `${dia}-${mes}-${año}`;
+    // }
     function formatearFecha(fecha) {
         const date = new Date(fecha);
         const año = date.getFullYear();
         const mes = String(date.getMonth() + 1).padStart(2, '0');
         const dia = String(date.getDate()).padStart(2, '0');
-        return `${dia}-${mes}-${año}`;
+        const horas = String(date.getHours()).padStart(2, '0');
+        const minutos = String(date.getMinutes()).padStart(2, '0');
+        const segundos = String(date.getSeconds()).padStart(2, '0');
+        
+        return `${dia}-${mes}-${año} ${horas}.${minutos}.${segundos}`;
     }
 
     // Verificar si `datos.id` está definido
@@ -76,7 +87,7 @@ function generarPDF(datos) {
         ["DNI / RUC", datos.dni || "No disponible"],
         ["Teléfono", datos.telefono || "No disponible"],
         ["Correo Electrónico", datos.correo || "No disponible"],
-        ["Domicilio", datos.domicilio || "No disponible"],
+        ["Dirección completa", datos.domicilio || "No disponible"],
         ["Distrito", datos.distrito || "No disponible"],
         ["Departamento", datos.departamento || "No disponible"],
         ["Provincia", datos.provincia || "No disponible"],

@@ -15,15 +15,13 @@
 
       <div class="container conten-complement">
         <h2 class="title-libro">Libro de Reclamaciones Virtual</h2>
-        <p class="p-complement">
+        <p class="p-complement" style="text-align: justify;">
           En Alma Bonita estamos siempre dispuestos a ayudarte a resolver
           cualquier inconveniente.
-        </p>
-        <p class="p-complement">
+     
           Puedes contactarnos directamente para cualquier duda, problema o
           reclamo. Siempre
-        </p>
-        <p class="p-complement">
+       
           velaremos por la satisfacción de nuestros clientes.
         </p>
         <br />
@@ -53,7 +51,7 @@
       <div class="container" style="margin-bottom: 20px;">
         <p><strong>ALMA BONITA PERU E.I.R.L.</strong></p>
         <p><strong>RUC: 20600577990</strong></p>
-        <p style="margin-top: 10px">
+        <p style="margin-top: 10px; text-align: justify; font-weight: bold;">
           De acuerdo a los establecido en el Código de Protección y Defensa del
           Consumidor Alma Bonita Perú EIRL con RUC 20600577990 y dirección Calle
           Los Olivos 381 San Isidro, Lima Perú; cuenta con un Libro de
@@ -62,7 +60,7 @@
           datos personales para la solución de su reclamo.
         </p>
         <br />
-        <p>
+        <p style="text-align: justify; font-weight: bold;">
           Al proporcionar tus datos personales mediante este formato, autorizas
           a Alma Bonita Perú EIRL., identificada con RUC N° 20600577990 a
           realizar el tratamiento de los mismos conforme a lo establecido en la
@@ -76,7 +74,7 @@
           contacto directo con tu piel.
         </p>
         <br />
-        <p>
+        <p style="text-align: justify; font-weight: bold;">
           Él tratamiento de los Datos Personales será realizado conforme a lo
           establecido por la legislación vigente de Perú en materia de
           protección de datos personales y de acuerdo a lo establecido en la
@@ -86,36 +84,53 @@
         </p>
         <br />
         <p>
-          <strong>* Usted puede imprimir esta hoja presionando Ctrl + P</strong>
+          <strong>*Usted podrá imprimir y/o descargar su Hoja de Reclamaciones luego de haberla enviado.</strong>
         </p>
         <br />
-        <p>
+        <p style="text-align: justify;">
+            <strong>
+                *Le recordamos que el proveedor (ALMA BONITA) le deberá dar respuesta 
+                a su Reclamo o Queja en un plazo no mayor de quince (15) días hábiles.</strong
+            >
+          </p>
+<br>
+        <p style="text-align: justify;">
           <strong>
-            * El Nro correlativo de cada Hoja de Reclamaciones se generará una
-            vez completado y enviado el formato. Recibirás una copia de tu Hoja
-            de Reclamaciones a tu correo electrónico. El proveedor deberá dar
-            respuesta al reclamo o queja en un plazo no mayor de quince (15)
-            días hábiles.</strong
+            *El número correlativo de cada Hoja de Reclamaciones se generará una vez se haya enviado
+             el formato. Asimismo, de haber consignado un correo electrónico, también le llegará una 
+             copia de su Hoja de Reclamaciones a su correo.</strong
           >
         </p>
         <br />
-        <p>
+        <p style="text-align: justify;">
           <strong
-            >* En caso ser menor de edad completar los datos del Padre o
-            Madre.</strong
+            >*En caso ser menor de edad, deberá completar los datos del Padre o Madre.</strong
           >
         </p>
         <br />
       </div>
 
-      <div class="container " id="title-uno"  style="margin-bottom: 20px;">
-        <h3  style="margin: 0.5rem;">1. IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE
-        </h3>
-      </div>
+     
+      <div class="container text-resp2"  id="title-uno"  style="margin-bottom: 10px; padding: 0px !important;">
+        <div class="text-resp" style="background: rgb(219, 192, 194); padding: 20px; border-radius: 10px 10px 0 0;"><h3 style="margin: 0rem;">1. IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE</h3>
+        </div>
+        <div  style="padding: 20px;">
+        <P><strong> Si desea registrar una copia de su formato llenado, haga click en 'control + P' 
+            para poder imprimir antes de presionar 'Continuar'.</strong></P>
+        </div>
+    </div>
 
       <div  id="formContainer">
         <div class="section active" id="section1">
+
             <input type="text" hidden  name="fechaRegistro" id="fechaRegistro">
+
+             <div class="container" style="display: flex; margin: 10px 0; align-items: center;">
+                <input style="width: 50px !important;" type="checkbox" id="menorEdad" /> 
+                <label for="">¿Es menor de edad?</label>
+            </div>
+
+
             <div class="container" id="nombreContainer" style="margin-bottom: 20px;" >
                 <label>Nombre Completo <span style="color: red;">*</span></label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu respuesta" required>
@@ -141,7 +156,7 @@
 
      
         <div class="container" style="margin-bottom: 20px;" >
-            <label>Correo Electrónico</label>
+            <label for="email">Correo Electrónico</label>
             <input type="email" id="email" name="correo"   placeholder="Tu respuesta" />
           </div>
        
@@ -151,20 +166,20 @@
         </div>
 
         <div class="container" style="margin-bottom: 20px;" >
-            <label>Domicilio</label>
+            <label for="domicilio">Dirección completa</label>
             <input type="text" id="domicilio" name="domicilio" placeholder="Tu respuesta" />
           </div>
           <div class="container" style="margin-bottom: 20px;" >
-            <label>Distrito</label>
+            <label for="distrito">Distrito</label>
             <input type="text" id="distrito" name="distrito" placeholder="Tu respuesta" />
           </div>
           
           <div class="container" style="margin-bottom: 20px;" >
-            <label>Departamento</label>
+            <label for="departamento">Departamento</label>
             <input type="text" id="departamento" name="departamento" placeholder="Tu respuesta" />
           </div>
           <div class="container" style="margin-bottom: 20px;" >
-            <label>Provincia</label>
+            <label for="provincia">Provincia</label>
             <input type="text" id="provincia" name="provincia" placeholder="Tu respuesta" />
           </div>
         </div>
@@ -208,8 +223,8 @@
         </div>
 
         <div class="container" style="margin-bottom: 20px;" >
-            <label>Costo del Producto Adquirido</label>
-            <input type="text" name="costoProducto" id="costo" placeholder="Tu respuesta" >
+            <label>Costo del Producto Adquirido (S/)</label>
+            <input type="number" name="costoProducto" id="costo" placeholder="Tu respuesta en número"  pattern="\d+(\.\d{1,2})?">
          
         </div>
         </div>
@@ -240,7 +255,7 @@
         </div>
 
         <div class="container" style="margin-bottom: 20px;" >
-            <label>Pedido del Consumidor</label>
+            <label>Pedido concreto del consumidor respecto al hecho que motiva el reclamo o queja.</label>
             <input type="text" name="pedido" id="PedidoConsumidor" placeholder="Tu respuesta" >
         </div>
          
