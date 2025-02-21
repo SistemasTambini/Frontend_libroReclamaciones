@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro de Reclamaciones</title>
+    <link rel="stylesheet" href="./estilos.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <div class="conten-libro">
+      <div class="container-img">
+        <img style="width: 600px" src="./img/logo-almabonita.jpeg" alt="" />
+      </div>
+
+      <div class="container conten-complement">
+        <h2 class="title-libro">Libro de Reclamaciones Virtual</h2>
+        <p class="p-complement">
+          En Alma Bonita estamos siempre dispuestos a ayudarte a resolver
+          cualquier inconveniente.
+        </p>
+        <p class="p-complement">
+          Puedes contactarnos directamente para cualquier duda, problema o
+          reclamo. Siempre
+        </p>
+        <p class="p-complement">
+          velaremos por la satisfacción de nuestros clientes.
+        </p>
+        <br />
+        <p style="font-weight: bold">Teléfono / Whatsapp</p>
+        <p style="margin-top: 10px">+51 989 356 142</p>
+        <br />
+        <p style="margin-bottom: 5px"><strong>Email</strong></p>
+        <a target="_blank" href="mailto:info@soyalmabonita.com"
+          >info@soyalmabonita.com</a
+        >
+
+        <p style="margin-top: 20px; margin-bottom: 5px">
+          <strong>Redes sociales:</strong>
+        </p>
+        <a target="_blank" href="https://www.facebook.com/soyalmabonita"
+          >https://www.facebook.com/soyalmabonita</a
+        >
+        <a target="_blank" href="https://www.instagram.com/soyalmabonita"
+          >https://www.instagram.com/soyalmabonita</a
+        >
+
+        <hr />
+        <p style="color: red">* Indica que la pregunta es obligatoria</p>
+        <hr />
+      </div>
+
+      <div class="container" style="margin-bottom: 20px;">
+        <p><strong>ALMA BONITA PERU E.I.R.L.</strong></p>
+        <p><strong>RUC: 20600577990</strong></p>
+        <p style="margin-top: 10px">
+          De acuerdo a los establecido en el Código de Protección y Defensa del
+          Consumidor Alma Bonita Perú EIRL con RUC 20600577990 y dirección Calle
+          Los Olivos 381 San Isidro, Lima Perú; cuenta con un Libro de
+          Reclamaciones Virtual a su disposición. Al ingresar sus datos en el
+          Libro de Reclamaciones usted está aceptando el tratamiento de sus
+          datos personales para la solución de su reclamo.
+        </p>
+        <br />
+        <p>
+          Al proporcionar tus datos personales mediante este formato, autorizas
+          a Alma Bonita Perú EIRL., identificada con RUC N° 20600577990 a
+          realizar el tratamiento de los mismos conforme a lo establecido en la
+          Política de Privacidad, la cual se encuentra disponible en esta misma
+          página web.​ Al suscribir este formato declaras que has sido informado
+          que no estás obligado a otorgar tu autorización sobre tus datos
+          sensibles y que, en caso de otorgarla, los mismos se tratarán con los
+          más altos estándares de protección. Dentro de los datos sensibles que
+          podemos llegar a solicitar para tramitar una reclamación se encuentran
+          los datos de salud porque comercializamos productos que podrían tener
+          contacto directo con tu piel.
+        </p>
+        <br />
+        <p>
+          Él tratamiento de los Datos Personales será realizado conforme a lo
+          establecido por la legislación vigente de Perú en materia de
+          protección de datos personales y de acuerdo a lo establecido en la
+          Política de Privacidad de los Sitios Web. Alma Bonita tratará los
+          datos personales con la finalidad de atender el reclamo ingresado por
+          el presente medio.
+        </p>
+        <br />
+        <p>
+          <strong>* Usted puede imprimir esta hoja presionando Ctrl + P</strong>
+        </p>
+        <br />
+        <p>
+          <strong>
+            * El Nro correlativo de cada Hoja de Reclamaciones se generará una
+            vez completado y enviado el formato. Recibirás una copia de tu Hoja
+            de Reclamaciones a tu correo electrónico. El proveedor deberá dar
+            respuesta al reclamo o queja en un plazo no mayor de quince (15)
+            días hábiles.</strong
+          >
+        </p>
+        <br />
+        <p>
+          <strong
+            >* En caso ser menor de edad completar los datos del Padre o
+            Madre.</strong
+          >
+        </p>
+        <br />
+      </div>
+
+      <div class="container " id="title-uno"  style="margin-bottom: 20px;">
+        <h3  style="margin: 0.5rem;">1. IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE
+        </h3>
+      </div>
+
+      <div  id="formContainer">
+        <div class="section active" id="section1">
+            <input type="text" hidden  name="fechaRegistro" id="fechaRegistro">
+            <div class="container" id="nombreContainer" style="margin-bottom: 20px;" >
+                <label>Nombre Completo <span style="color: red;">*</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu respuesta" required>
+                <div class="error-message" id="errorNombre" style="display: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="Error">
+                    Esta pregunta es obligatoria
+                </div>
+            </div>
+
+
+            <div class="container" id="dniContainer" style="margin-bottom: 20px;" >
+                <label>DNI / CE <span style="color: red;">*</span></label>
+                <input type="text" id="dni" name="dni" placeholder="Tu respuesta" required pattern="^\d{8}$|^[a-zA-Z0-9]{9,20}$" title="Debe ser un DNI (8 dígitos) o un CE (9-20 caracteres alfanuméricos)">
+                <div class="error-message" id="errorDni" style="display: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="Error">
+                    Esta pregunta es obligatoria
+                </div>
+                <div class="error-message" id="errorDniFormato" style="display: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="Error">
+                    Debe ser un DNI (8 dígitos) o un CE (9-20 caracteres alfanuméricos).
+                </div>
+            </div>
+
+     
+        <div class="container" style="margin-bottom: 20px;" >
+            <label>Correo Electrónico</label>
+            <input type="email" id="email" name="correo"   placeholder="Tu respuesta" />
+          </div>
+       
+          <div class="container" style="margin-bottom: 20px;" >
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Tu respuesta">
+        </div>
+
+        <div class="container" style="margin-bottom: 20px;" >
+            <label>Domicilio</label>
+            <input type="text" id="domicilio" name="domicilio" placeholder="Tu respuesta" />
+          </div>
+          <div class="container" style="margin-bottom: 20px;" >
+            <label>Distrito</label>
+            <input type="text" id="distrito" name="distrito" placeholder="Tu respuesta" />
+          </div>
+          
+          <div class="container" style="margin-bottom: 20px;" >
+            <label>Departamento</label>
+            <input type="text" id="departamento" name="departamento" placeholder="Tu respuesta" />
+          </div>
+          <div class="container" style="margin-bottom: 20px;" >
+            <label>Provincia</label>
+            <input type="text" id="provincia" name="provincia" placeholder="Tu respuesta" />
+          </div>
+        </div>
+
+        <!-- ==================SECCION 2 =======================-->
+         
+        <div class="section" id="section2">
+          
+            <div class="container text-resp2"  id="title-uno"  style="margin-bottom: 10px; padding: 0px !important;">
+              <div class="text-resp" style="background: rgb(219, 192, 194); padding: 20px; border-radius: 10px 10px 0 0;"><h3 style="margin: 0rem;">2. IDENTIFICACIÓN DEL BIEN CONTRATADO</h3>
+              </div>
+              <div  style="padding: 20px;">
+              <P><strong> Si desea registrar una copia de su formato llenado, haga click en 'control + P' 
+                  para poder imprimir antes de presionar 'Continuar'.</strong></P>
+              </div>
+          </div>
+  
+      
+  
+          <div class="container canal-compra" style="margin-bottom: 20px;">
+              <label><strong>Canal de Compra</strong></label>
+              <div class="radio-option">
+                  <input type="radio" name="canalCompra" value="Web" id="web">
+                  <label for="web">Web</label>
+              </div>
+              <div class="radio-option">
+                  <input type="radio" name="canalCompra" value="Módulo Jockey Plaza" id="jockey">
+                  <label for="jockey">Módulo Jockey Plaza</label>
+              </div>
+              <div class="radio-option">
+                  <input type="radio" name="canalCompra" value="Instagram o WhatsApp" id="instagram">
+                  <label for="instagram">Instagram o WhatsApp</label>
+              </div>
+          </div>
+
+       
+          <div class="container" style="margin-bottom: 20px;" >
+            <label>Producto Adquirido</label>
+            <input type="text" name="producto" id="producto" placeholder="Tu respuesta" >
+         
+        </div>
+
+        <div class="container" style="margin-bottom: 20px;" >
+            <label>Costo del Producto Adquirido</label>
+            <input type="text" name="costoProducto" id="costo" placeholder="Tu respuesta" >
+         
+        </div>
+        </div>
+
+  <!-- ==================SECCION 3 =======================-->
+
+        <div class="section" id="section3">
+          <div class="container text-resp2"  id="title-uno "  style="margin-bottom: 10px; padding: 0px !important; ">
+            <div class="text-resp" style="background: rgb(219, 192, 194); padding: 20px; border-radius: 10px 10px 0 0;"><h3 style="margin: 0rem;">3. Detalle de la Reclamación</h3>
+            </div>
+            <div style="padding: 20px;">
+             <p><strong>Reclamo o Queja</strong> </p>   
+             <div class="radio-option">
+                <input type="radio" name="tipoReclamo" value="Disconformidad relacionada a los productos o servicios" id="reclamo">
+                <label for="reclamo">Reclamo: Disconformidad relacionada a los productos o servicios </label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" name="tipoReclamo" value="Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público. " id="queja">
+                <label for="queja">Queja: Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público. </label>
+            </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom: 20px;" >
+            <label>Detalle de la reclamación o queja </label>
+            <!-- <input type="text" name="detalle" id="DetalleReclamo" placeholder="Tu respuesta" > -->
+            <textarea id="detalle" name="detalle"></textarea> 
+        </div>
+
+        <div class="container" style="margin-bottom: 20px;" >
+            <label>Pedido del Consumidor</label>
+            <input type="text" name="pedido" id="PedidoConsumidor" placeholder="Tu respuesta" >
+        </div>
+         
+        </div>
+
+        
+  <!-- ==================SECCION 4 =======================-->
+        <div class="section" id="section4">
+
+            <div class="container text-resp2"  id="title-uno"  style="margin-bottom: 10px; padding: 0px !important;">
+                <div  class="text-resp" style="background: rgb(219, 192, 194); padding: 20px; border-radius: 10px 10px 0 0;"><h3 style="margin: 0rem;">4. ACCIONES ADOPTADAS POR EL PROVEEDOR </h3>
+                </div>
+                <div style="padding: 20px;">
+                <P><strong> Observaciones y/o acciones adoptadas por el proveedor respecto a la queja o reclamo</strong></P>
+                <textarea id="observaciones" name="Observacion"></textarea>    
+            </div>
+            </div>
+            
+            <div class="container" style="margin-bottom: 20px;" >
+                <p>Acepto los T&C y la Política de privacidad y Datos. 
+                    <a target="_blank" href="https://www.soyalmabonita.com/protecci%C3%B3n-de-datos"> Ver todos los enlaces en el HomePage</a></p>
+                
+                <div style="display: flex; margin: 15px 0">
+                <input style="width: 50px !important;" type="checkbox" id="aceptar" /> 
+                <label for=""> Acepto los términos y condiciones</label>
+                </div>
+             
+
+            </div>
+
+        
+
+
+        </div>
+
+        
+        <div class="buttons">
+     
+            <button id="prev"  class="hidden btn-atras" onclick="prevSection()">
+              Atrás
+            </button>
+            <button id="next" class="btn-siguiente" onclick="nextSection()">Siguiente</button>
+            <button id="submit"  class="hidden btn-submit" onclick="submitForm()">
+              Enviar
+            </button>
+          </div>
+      </div>
+    </div>
+    </div>
+ 
+
+   <script src="./index.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+   
+  
+  </body> 
+</html>

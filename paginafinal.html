@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro de Reclamaciones</title>
+    <link rel="stylesheet" href="./estilos.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <div class="conten-libro">
+      <div class="container-img">
+        <img style="width: 600px" src="./img/logo-almabonita.jpeg" alt="" />
+      </div>
+   
+
+        <div >
+
+            <div class="container text-resp2 contenedor-final"  id="title-uno"  style="margin-bottom: 10px; padding: 0px !important;">
+                <div  style="background: rgb(219, 192, 194); padding: 8px; border-radius: 10px 10px 0 0;">
+                </div>
+                
+                <h3 style="font-size: 25px; padding: 20px;  margin: 0px;">LIBRO DE RECLAMACIONES VIRTUAL</h3>
+
+                <div class="list-final">
+                <p style="margin: 10px 0;">✅ Reclamo registrado con éxito.</p>
+                <p id="numero-reclamo" style="margin: 10px 0;">✅ Número de Reclamo: Cargando...</p>
+
+
+                <p style="margin: 10px 0;"> Puedes descargar tu hoja de reclamaciones aquí: </p> 
+                <a class="enlace-pdf" style="margin: 10px 0;" href="#">DESCARGAR PDF</a>
+                <a class="enlace-volver" style="margin: 10px 0;" href="./index.html">Enviar otra respuesta</a>    
+            </div>
+            </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+      </div>
+    </div>
+    </div>
+  
+
+   <script src="./index.js"></script>
+   <!-- Incluir jsPDF antes de pdf.js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   <script src="./pdf.js"></script>
+   <script src="./obtenerultID.js"></script>
+   
+   
+  </body> 
+</html>
