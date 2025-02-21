@@ -132,7 +132,7 @@
 
 
             <div class="container" id="nombreContainer" style="margin-bottom: 20px;" >
-                <label>Nombre Completo <span style="color: red;">*</span></label>
+                <label for="nombre">Nombre Completo<span style="color: red;">*</span></label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu respuesta" required>
                 <div class="error-message" id="errorNombre" style="display: none;">
                     <img src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="Error">
@@ -142,7 +142,7 @@
 
 
             <div class="container" id="dniContainer" style="margin-bottom: 20px;" >
-                <label>DNI / CE <span style="color: red;">*</span></label>
+                <label for="dni">DNI / CE<span style="color: red;">*</span></label>
                 <input type="text" id="dni" name="dni" placeholder="Tu respuesta" required pattern="^\d{8}$|^[a-zA-Z0-9]{9,20}$" title="Debe ser un DNI (8 dígitos) o un CE (9-20 caracteres alfanuméricos)">
                 <div class="error-message" id="errorDni" style="display: none;">
                     <img src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="Error">

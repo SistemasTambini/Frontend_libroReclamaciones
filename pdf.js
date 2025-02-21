@@ -70,7 +70,7 @@ function generarPDF(datos) {
         const minutos = String(date.getMinutes()).padStart(2, '0');
         const segundos = String(date.getSeconds()).padStart(2, '0');
         
-        return `${dia}-${mes}-${año} ${horas}.${minutos}.${segundos}`;
+        return `${dia}-${mes}-${año} ${horas}:${minutos}:${segundos}`;
     }
 
     // Verificar si `datos.id` está definido
@@ -82,7 +82,7 @@ function generarPDF(datos) {
     // Tabla de datos
     const info = [
         ["N° de Reclamo", String(datos.id)], 
-        ["Fecha de Registro", datos.fechaRegistro ? formatearFecha(datos.fechaRegistro) : "No disponible"],
+        ["Fecha y hora de Registro", datos.fechaRegistro ? formatearFecha(datos.fechaRegistro) : "No disponible"],
         ["Nombre", datos.nombre || "No disponible"],
         ["DNI / RUC", datos.dni || "No disponible"],
         ["Teléfono", datos.telefono || "No disponible"],

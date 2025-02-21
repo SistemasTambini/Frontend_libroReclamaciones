@@ -24,32 +24,72 @@ document.addEventListener("DOMContentLoaded", function () {
       fechaRegistro.value = fechaFormateada;
   }
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const checkboxMenorEdad = document.getElementById("menorEdad");
+  
+//   // Seleccionamos todos los labels dentro del formulario
+//   const labels = document.querySelectorAll("#formContainer label");
+
+//   // Campos específicos a modificar
+//   const campos = ["Nombre Completo", "DNI / CE","Correo Electrónico", "Teléfono", "Dirección completa", "Distrito", "Departamento", "Provincia"];
+
+//   checkboxMenorEdad.addEventListener("change", function () {
+//       labels.forEach(label => {
+//           const textoOriginal = label.textContent.trim(); // Obtenemos el texto original del label sin espacios extra
+
+//           // Si el label coincide con uno de los campos a modificar
+//           if (campos.includes(textoOriginal)) {
+//               if (checkboxMenorEdad.checked) {
+//                   if (!textoOriginal.includes("Apoderado")) {
+//                       label.textContent = `${textoOriginal} Apoderado`;
+//                   }
+//               } else {
+//                   label.textContent = textoOriginal.replace(" Apoderado", ""); // Quitamos "Apoderado" si se desmarca
+//               }
+//           }
+//       });
+//   });
+// });
 document.addEventListener("DOMContentLoaded", function () {
   const checkboxMenorEdad = document.getElementById("menorEdad");
   
   // Seleccionamos todos los labels dentro del formulario
   const labels = document.querySelectorAll("#formContainer label");
 
-  // Campos específicos a modificar
-  const campos = ["Correo Electrónico", "Teléfono", "Dirección completa", "Distrito", "Departamento", "Provincia"];
+  // Campos específicos a modificar y sus textos originales
+  const campos = {
+      "Nombre Completo": "Nombre Completo",
+      "DNI / CE": "DNI / CE",
+      "Correo Electrónico": "Correo Electrónico",
+      "Teléfono": "Teléfono",
+      "Dirección completa": "Dirección completa",
+      "Distrito": "Distrito",
+      "Departamento": "Departamento",
+      "Provincia": "Provincia"
+  };
 
   checkboxMenorEdad.addEventListener("change", function () {
       labels.forEach(label => {
-          const textoOriginal = label.textContent.trim(); // Obtenemos el texto original del label sin espacios extra
+          let textoOriginal = label.textContent.trim(); // Obtenemos el texto original sin espacios extra
 
-          // Si el label coincide con uno de los campos a modificar
-          if (campos.includes(textoOriginal)) {
-              if (checkboxMenorEdad.checked) {
-                  if (!textoOriginal.includes("Apoderado")) {
-                      label.textContent = `${textoOriginal} Apoderado`;
+          // Verificamos si el label está en la lista de campos a modificar
+          Object.keys(campos).forEach(key => {
+              if (textoOriginal.startsWith(campos[key])) {
+                  if (checkboxMenorEdad.checked) {
+                      if (!textoOriginal.includes(" Apoderado")) {
+                          label.innerHTML = `${campos[key]} Apoderado<span style="color: red;">*</span>`;
+                      }
+                  } else {
+                      label.innerHTML = `${campos[key]}<span style="color: red;">*</span>`; // Volver al texto original
                   }
-              } else {
-                  label.textContent = textoOriginal.replace(" Apoderado", ""); // Quitamos "Apoderado" si se desmarca
               }
-          }
+          });
       });
   });
 });
+
+
 
 
 
