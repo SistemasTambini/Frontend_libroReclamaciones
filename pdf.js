@@ -46,7 +46,7 @@ function generarPDF(datos) {
     doc.text("ALMA BONITA PERU E.I.R.L.", 105, 15, { align: "center" });
     doc.setFontSize(12);
     doc.text("RUC: 20600577990", 105, 22, { align: "center" });
-    doc.text("Dirección: Calle Los Olivos N° 381 Urb Orrantia - San Isidro", 105, 28, { align: "center" });
+    doc.text("Dirección: Calle Los Olivos N° 381 Urb Orrantia - San Isidro - Lima", 105, 28, { align: "center" });
 
     // Configurar un tamaño de fuente menor para el recordatorio y ubicarlo en otra posición
     doc.setFontSize(10);
