@@ -46,11 +46,17 @@ function generarPDF(datos) {
     doc.text("ALMA BONITA PERU E.I.R.L.", 105, 15, { align: "center" });
     doc.setFontSize(12);
     doc.text("RUC: 20600577990", 105, 22, { align: "center" });
-    doc.text("Dirección: Los Olivos 381 - San Isidro", 105, 28, { align: "center" });
+    doc.text("Dirección: Calle Los Olivos N° 381 Urb Orrantia - San Isidro", 105, 28, { align: "center" });
+
+    // Configurar un tamaño de fuente menor para el recordatorio y ubicarlo en otra posición
+    doc.setFontSize(10);
+    const recordatorio = "*Le recordamos que el proveedor (ALMA BONITA) le deberá dar respuesta a su Reclamo o Queja en un plazo no mayor de quince (15) días hábiles.";
+    const lineasRecordatorio = doc.splitTextToSize(recordatorio, 180); // Ajusta el ancho según sea necesario
+    doc.text(lineasRecordatorio, 105, 33, { align: "center" });
 
     doc.setFontSize(14);
     doc.setTextColor(200, 0, 0);
-    doc.text("Hoja de Reclamaciones", 105, 38, { align: "center" });
+    doc.text("Hoja de Reclamaciones", 105, 43, { align: "center" });
     doc.setTextColor(0, 0, 0);
 
     // Formatear la fecha de registro a "día-mes-año"
@@ -69,7 +75,7 @@ function generarPDF(datos) {
         const horas = String(date.getHours()).padStart(2, '0');
         const minutos = String(date.getMinutes()).padStart(2, '0');
         const segundos = String(date.getSeconds()).padStart(2, '0');
-        
+
         return `${dia}-${mes}-${año} ${horas}:${minutos}:${segundos}`;
     }
 
@@ -81,7 +87,7 @@ function generarPDF(datos) {
 
     // Tabla de datos
     const info = [
-        ["N° de Reclamo", String(datos.id)], 
+        ["N° de Reclamo", String(datos.id)],
         ["Fecha y hora de Registro", datos.fechaRegistro ? formatearFecha(datos.fechaRegistro) : "No disponible"],
         ["Nombre", datos.nombre || "No disponible"],
         ["DNI / RUC", datos.dni || "No disponible"],
