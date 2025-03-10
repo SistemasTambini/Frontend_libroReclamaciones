@@ -69,24 +69,46 @@ document.addEventListener("DOMContentLoaded", function () {
       "Provincia": "Provincia"
   };
 
-  checkboxMenorEdad.addEventListener("change", function () {
-      labels.forEach(label => {
-          let textoOriginal = label.textContent.trim(); // Obtenemos el texto original sin espacios extra
+  // checkboxMenorEdad.addEventListener("change", function () {
+  //     labels.forEach(label => {
+  //         let textoOriginal = label.textContent.trim(); // Obtenemos el texto original sin espacios extra
 
-          // Verificamos si el label está en la lista de campos a modificar
-          Object.keys(campos).forEach(key => {
-              if (textoOriginal.startsWith(campos[key])) {
-                  if (checkboxMenorEdad.checked) {
-                      if (!textoOriginal.includes(" Apoderado")) {
-                          label.innerHTML = `${campos[key]} Apoderado<span style="color: red;">*</span>`;
-                      }
-                  } else {
-                      label.innerHTML = `${campos[key]}<span style="color: red;">*</span>`; // Volver al texto original
-                  }
-              }
-          });
-      });
-  });
+  //         // Verificamos si el label está en la lista de campos a modificar
+  //         Object.keys(campos).forEach(key => {
+  //             if (textoOriginal.startsWith(campos[key])) {
+  //                 if (checkboxMenorEdad.checked) {
+  //                     if (!textoOriginal.includes(" Apoderado")) {
+  //                         label.innerHTML = `${campos[key]} Apoderado`;
+  //                     }
+  //                 } else {
+  //                     label.innerHTML = `${campos[key]}`; // Volver al texto original
+  //                 }
+  //             }
+  //         });
+  //     });
+  // });
+  checkboxMenorEdad.addEventListener("change", function () {
+    labels.forEach(label => {
+        let textoOriginal = label.textContent.trim().replace(/\s*\*/g, ""); // Eliminamos espacios extra y asterisco temporalmente
+
+        // Verificamos si el label está en la lista de campos a modificar
+        Object.keys(campos).forEach(key => {
+            if (textoOriginal.startsWith(campos[key])) {
+                let nuevoTexto = checkboxMenorEdad.checked 
+                    ? `${campos[key]} Apoderado` 
+                    : `${campos[key]}`;
+
+                // Si es "Nombre Completo" o "DNI / CE", aseguramos que tenga el asterisco
+                if (campos[key] === "Nombre Completo" || campos[key] === "DNI / CE") {
+                    nuevoTexto += `<span style="color: red;">*</span>`;
+                }
+
+                label.innerHTML = nuevoTexto;
+            }
+        });
+    });
+});
+
 });
 
 
